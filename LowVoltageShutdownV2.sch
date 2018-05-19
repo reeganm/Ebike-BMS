@@ -275,87 +275,6 @@
 </deviceset>
 </devicesets>
 </library>
-<library name="SISS23DN-T1-GE3CT-ND">
-<packages>
-<package name="POWERPAK1212-8S" urn="urn:adsk.eagle:footprint:3080197/1">
-<wire x1="0" y1="0" x2="3.3" y2="0" width="0.127" layer="21"/>
-<wire x1="0" y1="0" x2="0" y2="3.3" width="0.127" layer="21"/>
-<wire x1="3.302" y1="0" x2="3.302" y2="3.3" width="0.127" layer="21"/>
-<wire x1="0" y1="3.302" x2="3.3" y2="3.302" width="0.127" layer="21"/>
-<smd name="D" x="1.65" y="2.667" dx="2.25" dy="2.11" layer="1"/>
-<smd name="S" x="2.031" y="0.254" dx="2" dy="1.5" layer="1"/>
-<smd name="G" x="0.675" y="0.254" dx="0.3" dy="1.5" layer="1"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="POWERPAK1212-8S" urn="urn:adsk.eagle:package:3080199/2" type="model">
-<packageinstances>
-<packageinstance name="POWERPAK1212-8S"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="P-MOSFET">
-<wire x1="0.762" y1="-0.762" x2="0.762" y2="0" width="0.254" layer="94"/>
-<wire x1="0.762" y1="0" x2="0.762" y2="0.762" width="0.254" layer="94"/>
-<wire x1="0.762" y1="-3.175" x2="0.762" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="0.762" y1="-2.54" x2="0.762" y2="-1.905" width="0.254" layer="94"/>
-<wire x1="0.762" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="0" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="0.762" y1="1.905" x2="0.762" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0.762" y1="2.54" x2="0.762" y2="3.175" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="0.762" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="3.81" y1="-2.54" x2="3.81" y2="0.508" width="0.1524" layer="94"/>
-<wire x1="3.81" y1="0.508" x2="3.81" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="3.81" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="0.762" y1="-2.54" x2="3.81" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="3.048" y1="0.762" x2="3.302" y2="0.508" width="0.1524" layer="94"/>
-<wire x1="3.302" y1="0.508" x2="3.81" y2="0.508" width="0.1524" layer="94"/>
-<wire x1="3.81" y1="0.508" x2="4.318" y2="0.508" width="0.1524" layer="94"/>
-<wire x1="4.318" y1="0.508" x2="4.572" y2="0.254" width="0.1524" layer="94"/>
-<circle x="2.54" y="2.54" radius="0.3592" width="0" layer="94"/>
-<circle x="2.54" y="-2.54" radius="0.3592" width="0" layer="94"/>
-<text x="-11.43" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
-<text x="-11.43" y="-1.27" size="1.778" layer="95">&gt;NAME</text>
-<pin name="S" x="2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
-<pin name="G" x="-2.54" y="2.54" visible="off" length="short" direction="pas"/>
-<pin name="D" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
-<polygon width="0.1524" layer="94">
-<vertex x="3.81" y="0.508"/>
-<vertex x="4.318" y="-0.254"/>
-<vertex x="3.302" y="-0.254"/>
-</polygon>
-<polygon width="0.1524" layer="94">
-<vertex x="2.54" y="0"/>
-<vertex x="1.524" y="0.762"/>
-<vertex x="1.524" y="-0.762"/>
-</polygon>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SISS23DN-T1-GE3CY-ND">
-<gates>
-<gate name="G$1" symbol="P-MOSFET" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="POWERPAK1212-8S">
-<connects>
-<connect gate="G$1" pin="D" pad="D"/>
-<connect gate="G$1" pin="G" pad="G"/>
-<connect gate="G$1" pin="S" pad="S"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:3080199/2"/>
-</package3dinstances>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="trimpot">
 <packages>
 <package name="490-2877-ND" urn="urn:adsk.eagle:footprint:3080145/1">
@@ -426,11 +345,19 @@
 <hole x="5.08" y="0" drill="2.6"/>
 <text x="3.81" y="-2.54" size="1.27" layer="21" rot="R90">&gt;name</text>
 </package>
+<package name="450PAD" urn="urn:adsk.eagle:footprint:3080340/1">
+<smd name="P$1" x="0" y="0" dx="11.43" dy="11.43" layer="1"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="16G" urn="urn:adsk.eagle:package:3080160/3" type="box">
 <packageinstances>
 <packageinstance name="16G"/>
+</packageinstances>
+</package3d>
+<package3d name="450PAD" urn="urn:adsk.eagle:package:3080342/2" type="box">
+<packageinstances>
+<packageinstance name="450PAD"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -455,6 +382,24 @@
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:3080160/3"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="450PAD">
+<gates>
+<gate name="G$1" symbol="WIRE2BOARD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="450PAD">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:3080342/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -529,6 +474,133 @@
 </deviceset>
 </devicesets>
 </library>
+<library name="transistor-fet" urn="urn:adsk.eagle:library:396">
+<description>&lt;b&gt;Field Effect Transistors&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;&lt;p&gt;
+&lt;p&gt;
+Symbols changed according to IEC617&lt;p&gt; 
+All types, packages and assignment to symbols and pins checked&lt;p&gt;
+Package outlines partly checked&lt;p&gt;
+&lt;p&gt;
+JFET = junction FET&lt;p&gt;
+IGBT-x = insulated gate bipolar transistor&lt;p&gt;
+x=N: NPN; x=P: PNP&lt;p&gt;
+IGFET-mc-nnn; (IGFET=insulated gate field effect transistor)&lt;P&gt;
+m=D: depletion mode (Verdr&amp;auml;ngungstyp)&lt;p&gt;
+m=E: enhancement mode (Anreicherungstyp)&lt;p&gt;
+c: N=N-channel; P=P-Channel&lt;p&gt;
+GDSB: gate, drain, source, bulk&lt;p&gt;
+&lt;p&gt;
+by R. Vogg  15.March.2002</description>
+<packages>
+<package name="TO252" urn="urn:adsk.eagle:footprint:28481/1" library_version="2">
+<description>&lt;b&gt;SMALL OUTLINE TRANSISTOR&lt;/b&gt;&lt;p&gt;
+TS-003</description>
+<wire x1="3.2766" y1="3.8354" x2="3.277" y2="-2.159" width="0.2032" layer="21"/>
+<wire x1="3.277" y1="-2.159" x2="-3.277" y2="-2.159" width="0.2032" layer="21"/>
+<wire x1="-3.277" y1="-2.159" x2="-3.2766" y2="3.8354" width="0.2032" layer="21"/>
+<wire x1="-3.277" y1="3.835" x2="3.2774" y2="3.8346" width="0.2032" layer="51"/>
+<wire x1="-3.973" y1="5.983" x2="3.973" y2="5.983" width="0.0508" layer="39"/>
+<wire x1="3.973" y1="-5.983" x2="-3.973" y2="-5.983" width="0.0508" layer="39"/>
+<wire x1="-3.973" y1="-5.983" x2="-3.973" y2="5.983" width="0.0508" layer="39"/>
+<wire x1="3.973" y1="5.983" x2="3.973" y2="-5.983" width="0.0508" layer="39"/>
+<wire x1="-2.5654" y1="3.937" x2="-2.5654" y2="4.6482" width="0.2032" layer="51"/>
+<wire x1="-2.5654" y1="4.6482" x2="-2.1082" y2="5.1054" width="0.2032" layer="51"/>
+<wire x1="-2.1082" y1="5.1054" x2="2.1082" y2="5.1054" width="0.2032" layer="51"/>
+<wire x1="2.1082" y1="5.1054" x2="2.5654" y2="4.6482" width="0.2032" layer="51"/>
+<wire x1="2.5654" y1="4.6482" x2="2.5654" y2="3.937" width="0.2032" layer="51"/>
+<wire x1="2.5654" y1="3.937" x2="-2.5654" y2="3.937" width="0.2032" layer="51"/>
+<smd name="3" x="0" y="2.5" dx="5.4" dy="6.2" layer="1"/>
+<smd name="1" x="-2.28" y="-4.8" dx="1" dy="1.6" layer="1"/>
+<smd name="2" x="2.28" y="-4.8" dx="1" dy="1.6" layer="1"/>
+<text x="-3.81" y="-2.54" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="5.08" y="-2.54" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-2.7178" y1="-5.1562" x2="-1.8542" y2="-2.2606" layer="51"/>
+<rectangle x1="1.8542" y1="-5.1562" x2="2.7178" y2="-2.2606" layer="51"/>
+<rectangle x1="-0.4318" y1="-3.0226" x2="0.4318" y2="-2.2606" layer="21"/>
+<polygon width="0.1998" layer="51">
+<vertex x="-2.5654" y="3.937"/>
+<vertex x="-2.5654" y="4.6482"/>
+<vertex x="-2.1082" y="5.1054"/>
+<vertex x="2.1082" y="5.1054"/>
+<vertex x="2.5654" y="4.6482"/>
+<vertex x="2.5654" y="3.937"/>
+</polygon>
+</package>
+</packages>
+<packages3d>
+<package3d name="TO252" urn="urn:adsk.eagle:package:28537/2" type="model" library_version="2">
+<description>SMALL OUTLINE TRANSISTOR
+TS-003</description>
+<packageinstances>
+<packageinstance name="TO252"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="P-MOSFET" urn="urn:adsk.eagle:symbol:28480/1" library_version="2">
+<wire x1="0.762" y1="-0.762" x2="0.762" y2="0" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0" x2="0.762" y2="0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="-3.175" x2="0.762" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0.762" y1="-2.54" x2="0.762" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="1.905" x2="0.762" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0.762" y1="2.54" x2="0.762" y2="3.175" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="0.762" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="-2.54" x2="3.81" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0.508" x2="3.81" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="3.81" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="-2.54" x2="3.81" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="3.048" y1="0.762" x2="3.302" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="3.302" y1="0.508" x2="3.81" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0.508" x2="4.318" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="4.318" y1="0.508" x2="4.572" y2="0.254" width="0.1524" layer="94"/>
+<circle x="2.54" y="2.54" radius="0.3592" width="0" layer="94"/>
+<circle x="2.54" y="-2.54" radius="0.3592" width="0" layer="94"/>
+<text x="-11.43" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-11.43" y="-1.27" size="1.778" layer="95">&gt;NAME</text>
+<pin name="S" x="2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="G" x="-2.54" y="2.54" visible="off" length="short" direction="pas"/>
+<pin name="D" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<polygon width="0.1524" layer="94">
+<vertex x="3.81" y="0.508"/>
+<vertex x="4.318" y="-0.254"/>
+<vertex x="3.302" y="-0.254"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="2.54" y="0"/>
+<vertex x="1.524" y="0.762"/>
+<vertex x="1.524" y="-0.762"/>
+</polygon>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FDD4141" urn="urn:adsk.eagle:component:28628/2" prefix="Q" library_version="2">
+<description>&lt;b&gt;P-Channel PowerTrench® MOSFET&lt;/b&gt;&lt;p&gt;
+Source:  FDD4141.pdf</description>
+<gates>
+<gate name="G$1" symbol="P-MOSFET" x="0" y="0"/>
+</gates>
+<devices>
+<device name="TO252" package="TO252">
+<connects>
+<connect gate="G$1" pin="D" pad="3"/>
+<connect gate="G$1" pin="G" pad="1"/>
+<connect gate="G$1" pin="S" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:28537/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -541,12 +613,12 @@
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_A_L" device=""/>
 <part name="U$1" library="MIC842L" deviceset="MIC842L(3D_MODEL)" device="" package3d_urn="urn:adsk.eagle:package:3080138/1"/>
-<part name="U$2" library="SISS23DN-T1-GE3CT-ND" deviceset="SISS23DN-T1-GE3CY-ND" device="" package3d_urn="urn:adsk.eagle:package:3080199/2"/>
 <part name="U$3" library="trimpot" deviceset="TRIMPOT" device="" package3d_urn="urn:adsk.eagle:package:3080147/2"/>
-<part name="BAT+" library="Wire2Board" deviceset="16G" device="" package3d_urn="urn:adsk.eagle:package:3080160/3"/>
-<part name="GND" library="Wire2Board" deviceset="16G" device="" package3d_urn="urn:adsk.eagle:package:3080160/3"/>
 <part name="OUT" library="Wire2Board" deviceset="16G" device="" package3d_urn="urn:adsk.eagle:package:3080160/3"/>
 <part name="U$4" library="1655-1513-1-ND" deviceset="1655-1513-1-ND(3D_MODEL)" device="" package3d_urn="urn:adsk.eagle:package:3080154/1"/>
+<part name="U$5" library="Wire2Board" deviceset="450PAD" device="" package3d_urn="urn:adsk.eagle:package:3080342/2"/>
+<part name="U$6" library="Wire2Board" deviceset="450PAD" device="" package3d_urn="urn:adsk.eagle:package:3080342/2"/>
+<part name="Q1" library="transistor-fet" library_urn="urn:adsk.eagle:library:396" deviceset="FDD4141" device="TO252" package3d_urn="urn:adsk.eagle:package:28537/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -556,12 +628,12 @@
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="172.72" y="0"/>
 <instance part="U$1" gate="G$1" x="142.24" y="109.22"/>
-<instance part="U$2" gate="G$1" x="187.96" y="127"/>
 <instance part="U$3" gate="G$1" x="114.3" y="109.22" rot="R270"/>
-<instance part="BAT+" gate="G$1" x="76.2" y="147.32" rot="R180"/>
-<instance part="GND" gate="G$1" x="76.2" y="127" rot="R180"/>
 <instance part="OUT" gate="G$1" x="76.2" y="106.68" rot="R180"/>
 <instance part="U$4" gate="G$1" x="88.9" y="119.38" rot="R270"/>
+<instance part="U$5" gate="G$1" x="76.2" y="147.32" rot="R180"/>
+<instance part="U$6" gate="G$1" x="76.2" y="127" rot="R180"/>
+<instance part="Q1" gate="G$1" x="187.96" y="127"/>
 </instances>
 <busses>
 </busses>
@@ -586,16 +658,16 @@
 <label x="132.08" y="93.98" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="GND" gate="G$1" pin="P$1"/>
 <wire x1="86.36" y1="127" x2="88.9" y2="127" width="0.1524" layer="91"/>
 <label x="91.44" y="127" size="1.778" layer="95" xref="yes"/>
 <pinref part="U$4" gate="G$1" pin="A"/>
 <wire x1="88.9" y1="127" x2="91.44" y2="127" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="121.92" x2="88.9" y2="127" width="0.1524" layer="91"/>
 <junction x="88.9" y="127"/>
+<pinref part="U$6" gate="G$1" pin="P$1"/>
 </segment>
 </net>
-<net name="BAT+" class="0">
+<net name="BAT" class="0">
 <segment>
 <pinref part="U$3" gate="G$1" pin="CCW"/>
 <wire x1="114.3" y1="114.3" x2="114.3" y2="121.92" width="0.1524" layer="91"/>
@@ -608,30 +680,30 @@
 <label x="114.3" y="127" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="S"/>
 <wire x1="190.5" y1="132.08" x2="190.5" y2="137.16" width="0.1524" layer="91"/>
 <label x="190.5" y="137.16" size="1.778" layer="95" rot="R90" xref="yes"/>
+<pinref part="Q1" gate="G$1" pin="S"/>
 </segment>
 <segment>
-<pinref part="BAT+" gate="G$1" pin="P$1"/>
 <wire x1="86.36" y1="147.32" x2="91.44" y2="147.32" width="0.1524" layer="91"/>
 <label x="91.44" y="147.32" size="1.778" layer="95" xref="yes"/>
+<pinref part="U$5" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="G"/>
 <wire x1="185.42" y1="129.54" x2="170.18" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="129.54" x2="170.18" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="OUT"/>
 <wire x1="170.18" y1="114.3" x2="154.94" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="Q1" gate="G$1" pin="G"/>
 </segment>
 </net>
 <net name="OUT" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="D"/>
 <wire x1="190.5" y1="121.92" x2="190.5" y2="116.84" width="0.1524" layer="91"/>
 <label x="190.5" y="116.84" size="1.778" layer="95" rot="R270" xref="yes"/>
+<pinref part="Q1" gate="G$1" pin="D"/>
 </segment>
 <segment>
 <pinref part="OUT" gate="G$1" pin="P$1"/>
