@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.0">
+<eagle version="9.0.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -619,6 +619,7 @@ Source:  FDD4141.pdf</description>
 <part name="U$5" library="Wire2Board" deviceset="450PAD" device="" package3d_urn="urn:adsk.eagle:package:3080342/2"/>
 <part name="U$6" library="Wire2Board" deviceset="450PAD" device="" package3d_urn="urn:adsk.eagle:package:3080342/2"/>
 <part name="Q1" library="transistor-fet" library_urn="urn:adsk.eagle:library:396" deviceset="FDD4141" device="TO252" package3d_urn="urn:adsk.eagle:package:28537/2"/>
+<part name="OUT1" library="Wire2Board" deviceset="16G" device="" package3d_urn="urn:adsk.eagle:package:3080160/3"/>
 </parts>
 <sheets>
 <sheet>
@@ -634,6 +635,7 @@ Source:  FDD4141.pdf</description>
 <instance part="U$5" gate="G$1" x="76.2" y="147.32" rot="R180"/>
 <instance part="U$6" gate="G$1" x="76.2" y="127" rot="R180"/>
 <instance part="Q1" gate="G$1" x="187.96" y="127"/>
+<instance part="OUT1" gate="G$1" x="55.88" y="127" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -665,6 +667,11 @@ Source:  FDD4141.pdf</description>
 <wire x1="88.9" y1="121.92" x2="88.9" y2="127" width="0.1524" layer="91"/>
 <junction x="88.9" y="127"/>
 <pinref part="U$6" gate="G$1" pin="P$1"/>
+<pinref part="OUT1" gate="G$1" pin="P$1"/>
+<wire x1="66.04" y1="127" x2="68.58" y2="127" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="127" x2="68.58" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="134.62" x2="88.9" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="134.62" x2="88.9" y2="127" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BAT" class="0">
