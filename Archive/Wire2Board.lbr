@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.0">
+<eagle version="9.0.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -104,7 +104,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="16G" prefix="W">
+<deviceset name="16G">
 <gates>
 <gate name="G$1" symbol="WIRE2BOARD" x="0" y="0"/>
 </gates>
