@@ -5169,6 +5169,7 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <part name="X2" library="con-JST" deviceset="B8B-XH" device="-2"/>
 <part name="IC1" library="AS321" deviceset="AS321" device=""/>
 <part name="X3" library="con-JST" deviceset="B8B-XH" device="-2"/>
+<part name="C4" library="EcoCar-Passives" deviceset="CAPACITOR_0805" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5345,6 +5346,10 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <attribute name="VALUE" x="3.81" y="35.56" size="1.778" layer="96"/>
 <attribute name="NAME" x="3.81" y="61.722" size="1.778" layer="95"/>
 </instance>
+<instance part="C4" gate="G$1" x="187.96" y="48.26" smashed="yes">
+<attribute name="NAME" x="189.484" y="51.181" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="189.484" y="46.101" size="1.778" layer="96" font="vector"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -5462,6 +5467,11 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <wire x1="12.7" y1="40.64" x2="15.24" y2="40.64" width="0.1524" layer="91"/>
 <label x="15.24" y="40.64" size="1.778" layer="95" xref="yes"/>
 <pinref part="X3" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="187.96" y1="45.72" x2="185.42" y2="45.72" width="0.1524" layer="91"/>
+<label x="185.42" y="45.72" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CELL1" class="0">
@@ -5642,6 +5652,16 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <pinref part="X3" gate="G$1" pin="8"/>
 <wire x1="12.7" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
 <label x="22.86" y="58.42" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="187.96" y1="53.34" x2="185.42" y2="53.34" width="0.1524" layer="91"/>
+<label x="185.42" y="53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="V+"/>
+<wire x1="203.2" y1="68.58" x2="203.2" y2="71.12" width="0.1524" layer="91"/>
+<label x="203.2" y="71.12" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -5892,13 +5912,6 @@ USE AT YOUR OWN RISK!&lt;p&gt;
 <wire x1="12.7" y1="50.8" x2="15.24" y2="50.8" width="0.1524" layer="91"/>
 <label x="15.24" y="50.8" size="1.778" layer="95" xref="yes"/>
 <pinref part="X3" gate="G$1" pin="5"/>
-</segment>
-</net>
-<net name="CALL6" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="V+"/>
-<wire x1="203.2" y1="68.58" x2="203.2" y2="71.12" width="0.1524" layer="91"/>
-<label x="203.2" y="71.12" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 </nets>

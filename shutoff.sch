@@ -692,6 +692,51 @@ Diode with low voltage drop</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="Wire2Board">
+<packages>
+<package name="16G" urn="urn:adsk.eagle:footprint:3080158/1">
+<pad name="P$1" x="0" y="0" drill="1.4"/>
+<hole x="5.08" y="0" drill="2.6"/>
+<text x="3.81" y="-2.54" size="1.27" layer="21" rot="R90">&gt;name</text>
+</package>
+</packages>
+<packages3d>
+<package3d name="16G" urn="urn:adsk.eagle:package:3080160/3" type="box">
+<packageinstances>
+<packageinstance name="16G"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="WIRE2BOARD">
+<pin name="P$1" x="-10.16" y="0" length="middle"/>
+<wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="16G" prefix="W">
+<gates>
+<gate name="G$1" symbol="WIRE2BOARD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="16G">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:3080160/3"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -720,6 +765,10 @@ Diode with low voltage drop</description>
 <part name="D1" library="EcoCar-Fuses-Protection" deviceset="DIODE_TVS_DO-214AA" device=""/>
 <part name="D2" library="EcoCar-Fuses-Protection" deviceset="DIODE_TVS_DO-214AA" device=""/>
 <part name="C1" library="EcoCar-Passives" deviceset="CAPACITOR_0805" device=""/>
+<part name="W1" library="Wire2Board" deviceset="16G" device="" package3d_urn="urn:adsk.eagle:package:3080160/3"/>
+<part name="W2" library="Wire2Board" deviceset="16G" device="" package3d_urn="urn:adsk.eagle:package:3080160/3"/>
+<part name="W3" library="Wire2Board" deviceset="16G" device="" package3d_urn="urn:adsk.eagle:package:3080160/3"/>
+<part name="W4" library="Wire2Board" deviceset="16G" device="" package3d_urn="urn:adsk.eagle:package:3080160/3"/>
 </parts>
 <sheets>
 <sheet>
@@ -740,17 +789,17 @@ Diode with low voltage drop</description>
 <attribute name="VALUE" x="6.35" y="149.86" size="1.778" layer="96"/>
 <attribute name="NAME" x="6.35" y="176.022" size="1.778" layer="95"/>
 </instance>
-<instance part="Q1" gate="G$1" x="111.76" y="165.1" smashed="yes">
-<attribute name="NAME" x="116.84" y="165.1" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="116.84" y="162.56" size="1.778" layer="96" font="vector"/>
+<instance part="Q1" gate="G$1" x="162.56" y="106.68" smashed="yes">
+<attribute name="NAME" x="167.64" y="106.68" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="167.64" y="104.14" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="Q2" gate="G$1" x="142.24" y="165.1" smashed="yes">
-<attribute name="NAME" x="147.32" y="165.1" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="147.32" y="162.56" size="1.778" layer="96" font="vector"/>
+<instance part="Q2" gate="G$1" x="193.04" y="106.68" smashed="yes">
+<attribute name="NAME" x="198.12" y="106.68" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="198.12" y="104.14" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="Q3" gate="G$1" x="172.72" y="165.1" smashed="yes">
-<attribute name="NAME" x="177.8" y="165.1" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="177.8" y="162.56" size="1.778" layer="96" font="vector"/>
+<instance part="Q3" gate="G$1" x="223.52" y="106.68" smashed="yes">
+<attribute name="NAME" x="228.6" y="106.68" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="228.6" y="104.14" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="Q4" gate="G$1" x="111.76" y="83.82" smashed="yes">
 <attribute name="NAME" x="116.84" y="83.82" size="1.778" layer="95" font="vector"/>
@@ -788,6 +837,10 @@ Diode with low voltage drop</description>
 <attribute name="NAME" x="105.664" y="71.501" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="105.664" y="66.421" size="1.778" layer="96" font="vector"/>
 </instance>
+<instance part="W1" gate="G$1" x="182.88" y="160.02" smashed="yes" rot="R90"/>
+<instance part="W2" gate="G$1" x="182.88" y="55.88" smashed="yes" rot="R270"/>
+<instance part="W3" gate="G$1" x="210.82" y="55.88" smashed="yes" rot="R270"/>
+<instance part="W4" gate="G$1" x="210.82" y="160.02" smashed="yes" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -825,63 +878,64 @@ Diode with low voltage drop</description>
 <label x="25.4" y="172.72" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="SIG1" class="0">
-<segment>
-<pinref part="X1" gate="G$1" pin="2"/>
-<wire x1="15.24" y1="157.48" x2="27.94" y2="157.48" width="0.1524" layer="91"/>
-<label x="27.94" y="157.48" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="SIG2" class="0">
-<segment>
-<pinref part="X1" gate="G$1" pin="3"/>
-<wire x1="15.24" y1="160.02" x2="17.78" y2="160.02" width="0.1524" layer="91"/>
-<label x="17.78" y="160.02" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="SIG3" class="0">
-<segment>
-<pinref part="X1" gate="G$1" pin="4"/>
-<wire x1="15.24" y1="162.56" x2="27.94" y2="162.56" width="0.1524" layer="91"/>
-<label x="27.94" y="162.56" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="SIG4" class="0">
-<segment>
-<pinref part="X1" gate="G$1" pin="5"/>
-<wire x1="15.24" y1="165.1" x2="17.78" y2="165.1" width="0.1524" layer="91"/>
-<label x="17.78" y="165.1" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="SIG5" class="0">
-<segment>
-<pinref part="X1" gate="G$1" pin="6"/>
-<wire x1="15.24" y1="167.64" x2="27.94" y2="167.64" width="0.1524" layer="91"/>
-<label x="27.94" y="167.64" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="SIG6" class="0">
+<net name="SIG" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="7"/>
 <wire x1="15.24" y1="170.18" x2="17.78" y2="170.18" width="0.1524" layer="91"/>
 <label x="17.78" y="170.18" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="X1" gate="G$1" pin="6"/>
+<wire x1="15.24" y1="167.64" x2="25.4" y2="167.64" width="0.1524" layer="91"/>
+<label x="25.4" y="167.64" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="X1" gate="G$1" pin="5"/>
+<wire x1="15.24" y1="165.1" x2="17.78" y2="165.1" width="0.1524" layer="91"/>
+<label x="17.78" y="165.1" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="X1" gate="G$1" pin="4"/>
+<wire x1="15.24" y1="162.56" x2="25.4" y2="162.56" width="0.1524" layer="91"/>
+<label x="25.4" y="162.56" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="X1" gate="G$1" pin="3"/>
+<wire x1="15.24" y1="160.02" x2="17.78" y2="160.02" width="0.1524" layer="91"/>
+<label x="17.78" y="160.02" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="X1" gate="G$1" pin="2"/>
+<wire x1="15.24" y1="157.48" x2="25.4" y2="157.48" width="0.1524" layer="91"/>
+<label x="25.4" y="157.48" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="81.28" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="81.28" x2="78.74" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="78.74" y1="81.28" x2="78.74" y2="73.66" width="0.1524" layer="91"/>
+<junction x="78.74" y="81.28"/>
+<wire x1="78.74" y1="81.28" x2="76.2" y2="81.28" width="0.1524" layer="91"/>
+<label x="76.2" y="81.28" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="BATV_I" class="0">
 <segment>
 <pinref part="Q1" gate="G$1" pin="S"/>
-<wire x1="114.3" y1="160.02" x2="114.3" y2="157.48" width="0.1524" layer="91"/>
-<label x="114.3" y="157.48" size="1.778" layer="95" rot="R270" xref="yes"/>
+<wire x1="165.1" y1="101.6" x2="165.1" y2="99.06" width="0.1524" layer="91"/>
+<label x="165.1" y="99.06" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
 <pinref part="Q2" gate="G$1" pin="S"/>
-<wire x1="144.78" y1="160.02" x2="144.78" y2="157.48" width="0.1524" layer="91"/>
-<label x="144.78" y="157.48" size="1.778" layer="95" rot="R270" xref="yes"/>
+<wire x1="195.58" y1="101.6" x2="195.58" y2="99.06" width="0.1524" layer="91"/>
+<label x="195.58" y="99.06" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
 <pinref part="Q3" gate="G$1" pin="S"/>
-<wire x1="175.26" y1="160.02" x2="175.26" y2="157.48" width="0.1524" layer="91"/>
-<label x="175.26" y="157.48" size="1.778" layer="95" rot="R270" xref="yes"/>
+<wire x1="226.06" y1="101.6" x2="226.06" y2="99.06" width="0.1524" layer="91"/>
+<label x="226.06" y="99.06" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
 <pinref part="D2" gate="G$1" pin="C"/>
@@ -898,39 +952,59 @@ Diode with low voltage drop</description>
 <junction x="99.06" y="116.84"/>
 <label x="99.06" y="121.92" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
+<segment>
+<pinref part="W2" gate="G$1" pin="P$1"/>
+<wire x1="182.88" y1="66.04" x2="182.88" y2="68.58" width="0.1524" layer="91"/>
+<label x="182.88" y="68.58" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="W3" gate="G$1" pin="P$1"/>
+<wire x1="210.82" y1="66.04" x2="210.82" y2="68.58" width="0.1524" layer="91"/>
+<label x="210.82" y="68.58" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
 </net>
 <net name="BATV_E" class="0">
 <segment>
 <pinref part="Q1" gate="G$1" pin="D"/>
-<wire x1="114.3" y1="170.18" x2="114.3" y2="172.72" width="0.1524" layer="91"/>
-<label x="114.3" y="172.72" size="1.778" layer="95" rot="R90" xref="yes"/>
+<wire x1="165.1" y1="111.76" x2="165.1" y2="114.3" width="0.1524" layer="91"/>
+<label x="165.1" y="114.3" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
 <pinref part="Q2" gate="G$1" pin="D"/>
-<wire x1="144.78" y1="170.18" x2="144.78" y2="172.72" width="0.1524" layer="91"/>
-<label x="144.78" y="172.72" size="1.778" layer="95" rot="R90" xref="yes"/>
+<wire x1="195.58" y1="111.76" x2="195.58" y2="114.3" width="0.1524" layer="91"/>
+<label x="195.58" y="114.3" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
 <pinref part="Q3" gate="G$1" pin="D"/>
-<wire x1="175.26" y1="170.18" x2="175.26" y2="172.72" width="0.1524" layer="91"/>
-<label x="175.26" y="172.72" size="1.778" layer="95" rot="R90" xref="yes"/>
+<wire x1="226.06" y1="111.76" x2="226.06" y2="114.3" width="0.1524" layer="91"/>
+<label x="226.06" y="114.3" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="W1" gate="G$1" pin="P$1"/>
+<wire x1="182.88" y1="149.86" x2="182.88" y2="147.32" width="0.1524" layer="91"/>
+<label x="182.88" y="147.32" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="W4" gate="G$1" pin="P$1"/>
+<wire x1="210.82" y1="149.86" x2="210.82" y2="147.32" width="0.1524" layer="91"/>
+<label x="210.82" y="147.32" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="GATE" class="0">
 <segment>
 <pinref part="Q1" gate="G$1" pin="G"/>
-<wire x1="106.68" y1="162.56" x2="104.14" y2="162.56" width="0.1524" layer="91"/>
-<label x="104.14" y="162.56" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="157.48" y1="104.14" x2="154.94" y2="104.14" width="0.1524" layer="91"/>
+<label x="154.94" y="104.14" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="Q2" gate="G$1" pin="G"/>
-<wire x1="137.16" y1="162.56" x2="134.62" y2="162.56" width="0.1524" layer="91"/>
-<label x="134.62" y="162.56" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="187.96" y1="104.14" x2="185.42" y2="104.14" width="0.1524" layer="91"/>
+<label x="185.42" y="104.14" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="Q3" gate="G$1" pin="G"/>
-<wire x1="167.64" y1="162.56" x2="165.1" y2="162.56" width="0.1524" layer="91"/>
-<label x="165.1" y="162.56" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="218.44" y1="104.14" x2="215.9" y2="104.14" width="0.1524" layer="91"/>
+<label x="215.9" y="104.14" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -967,17 +1041,6 @@ Diode with low voltage drop</description>
 <junction x="96.52" y="81.28"/>
 </segment>
 </net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="81.28" y1="81.28" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="81.28" x2="78.74" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="78.74" y1="81.28" x2="78.74" y2="73.66" width="0.1524" layer="91"/>
-<junction x="78.74" y="81.28"/>
-</segment>
-</net>
 </nets>
 </sheet>
 </sheets>
@@ -1002,6 +1065,11 @@ with this version.
 Since Version 8.3, EAGLE supports URNs for individual library
 assets (packages, symbols, and devices). The URNs of those assets
 will not be understood (or retained) with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports the association of 3D packages
+with devices in libraries, schematics, and board files. Those 3D
+packages will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
