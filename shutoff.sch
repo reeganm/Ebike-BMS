@@ -757,18 +757,18 @@ Diode with low voltage drop</description>
 <part name="Q2" library="EcoCar-Discrete-Semiconductors" deviceset="MOSFET_PMOS_TO-263" device=""/>
 <part name="Q3" library="EcoCar-Discrete-Semiconductors" deviceset="MOSFET_PMOS_TO-263" device=""/>
 <part name="Q4" library="EcoCar-Discrete-Semiconductors" deviceset="MOSFET_NMOS_TO-263" device=""/>
-<part name="R1" library="EcoCar-Passives" deviceset="RESISTOR_0805" device=""/>
 <part name="R2" library="EcoCar-Passives" deviceset="RESISTOR_0805" device=""/>
-<part name="R3" library="EcoCar-Passives" deviceset="RESISTOR_0805" device=""/>
-<part name="R4" library="EcoCar-Passives" deviceset="RESISTOR_0805" device=""/>
+<part name="R1" library="EcoCar-Passives" deviceset="RESISTOR_0805" device=""/>
 <part name="R5" library="EcoCar-Passives" deviceset="RESISTOR_0805" device=""/>
-<part name="D1" library="EcoCar-Fuses-Protection" deviceset="DIODE_TVS_DO-214AA" device=""/>
+<part name="R4" library="EcoCar-Passives" deviceset="RESISTOR_0805" device=""/>
+<part name="R3" library="EcoCar-Passives" deviceset="RESISTOR_0805" device=""/>
 <part name="D2" library="EcoCar-Fuses-Protection" deviceset="DIODE_TVS_DO-214AA" device=""/>
+<part name="D1" library="EcoCar-Fuses-Protection" deviceset="DIODE_TVS_DO-214AA" device=""/>
 <part name="C1" library="EcoCar-Passives" deviceset="CAPACITOR_0805" device=""/>
 <part name="W1" library="Wire2Board" deviceset="16G" device="" package3d_urn="urn:adsk.eagle:package:3080160/3"/>
-<part name="W2" library="Wire2Board" deviceset="16G" device="" package3d_urn="urn:adsk.eagle:package:3080160/3"/>
 <part name="W3" library="Wire2Board" deviceset="16G" device="" package3d_urn="urn:adsk.eagle:package:3080160/3"/>
 <part name="W4" library="Wire2Board" deviceset="16G" device="" package3d_urn="urn:adsk.eagle:package:3080160/3"/>
+<part name="W2" library="Wire2Board" deviceset="16G" device="" package3d_urn="urn:adsk.eagle:package:3080160/3"/>
 </parts>
 <sheets>
 <sheet>
@@ -805,15 +805,15 @@ Diode with low voltage drop</description>
 <attribute name="NAME" x="116.84" y="83.82" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="116.84" y="81.28" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="R1" gate="G$1" x="114.3" y="96.52" smashed="yes" rot="R90">
+<instance part="R2" gate="G$1" x="114.3" y="96.52" smashed="yes" rot="R90">
 <attribute name="NAME" x="112.776" y="96.52" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="115.824" y="96.52" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="R2" gate="G$1" x="114.3" y="109.22" smashed="yes" rot="R90">
+<instance part="R1" gate="G$1" x="114.3" y="109.22" smashed="yes" rot="R90">
 <attribute name="NAME" x="112.776" y="109.22" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="115.824" y="109.22" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="R3" gate="G$1" x="78.74" y="68.58" smashed="yes" rot="R270">
+<instance part="R5" gate="G$1" x="78.74" y="68.58" smashed="yes" rot="R270">
 <attribute name="NAME" x="80.264" y="68.58" size="1.778" layer="95" font="vector" rot="R270" align="bottom-center"/>
 <attribute name="VALUE" x="77.216" y="68.58" size="1.778" layer="96" font="vector" rot="R270" align="top-center"/>
 </instance>
@@ -821,15 +821,15 @@ Diode with low voltage drop</description>
 <attribute name="NAME" x="86.36" y="82.804" size="1.778" layer="95" font="vector" align="bottom-center"/>
 <attribute name="VALUE" x="86.36" y="79.756" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
-<instance part="R5" gate="G$1" x="78.74" y="93.98" smashed="yes" rot="R90">
+<instance part="R3" gate="G$1" x="78.74" y="93.98" smashed="yes" rot="R90">
 <attribute name="NAME" x="77.216" y="93.98" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="80.264" y="93.98" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="D1" gate="G$1" x="96.52" y="71.12" smashed="yes" rot="R90">
+<instance part="D2" gate="G$1" x="96.52" y="71.12" smashed="yes" rot="R90">
 <attribute name="NAME" x="94.488" y="68.58" size="1.778" layer="95" font="vector" rot="R90"/>
 <attribute name="VALUE" x="98.552" y="68.58" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
-<instance part="D2" gate="G$1" x="124.46" y="109.22" smashed="yes" rot="R90">
+<instance part="D1" gate="G$1" x="124.46" y="109.22" smashed="yes" rot="R90">
 <attribute name="NAME" x="122.428" y="106.68" size="1.778" layer="95" font="vector" rot="R90"/>
 <attribute name="VALUE" x="126.492" y="106.68" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
@@ -838,9 +838,9 @@ Diode with low voltage drop</description>
 <attribute name="VALUE" x="105.664" y="66.421" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="W1" gate="G$1" x="182.88" y="160.02" smashed="yes" rot="R90"/>
-<instance part="W2" gate="G$1" x="182.88" y="55.88" smashed="yes" rot="R270"/>
-<instance part="W3" gate="G$1" x="210.82" y="55.88" smashed="yes" rot="R270"/>
-<instance part="W4" gate="G$1" x="210.82" y="160.02" smashed="yes" rot="R90"/>
+<instance part="W3" gate="G$1" x="182.88" y="55.88" smashed="yes" rot="R270"/>
+<instance part="W4" gate="G$1" x="210.82" y="55.88" smashed="yes" rot="R270"/>
+<instance part="W2" gate="G$1" x="210.82" y="160.02" smashed="yes" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -861,9 +861,9 @@ Diode with low voltage drop</description>
 <wire x1="96.52" y1="60.96" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="66.04" x2="104.14" y2="60.96" width="0.1524" layer="91"/>
 <junction x="104.14" y="60.96"/>
-<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="78.74" y1="63.5" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="D1" gate="G$1" pin="A"/>
+<pinref part="D2" gate="G$1" pin="A"/>
 <wire x1="96.52" y1="68.58" x2="96.52" y2="60.96" width="0.1524" layer="91"/>
 <junction x="96.52" y="60.96"/>
 <junction x="99.06" y="60.96"/>
@@ -911,10 +911,10 @@ Diode with low voltage drop</description>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="81.28" y1="81.28" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="81.28" x2="78.74" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="78.74" y1="81.28" x2="78.74" y2="73.66" width="0.1524" layer="91"/>
 <junction x="78.74" y="81.28"/>
 <wire x1="78.74" y1="81.28" x2="76.2" y2="81.28" width="0.1524" layer="91"/>
@@ -938,12 +938,12 @@ Diode with low voltage drop</description>
 <label x="226.06" y="99.06" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="D2" gate="G$1" pin="C"/>
+<pinref part="D1" gate="G$1" pin="C"/>
 <wire x1="124.46" y1="111.76" x2="124.46" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="124.46" y1="116.84" x2="114.3" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="116.84" x2="114.3" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="78.74" y1="99.06" x2="78.74" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="116.84" x2="99.06" y2="116.84" width="0.1524" layer="91"/>
 <junction x="114.3" y="116.84"/>
@@ -953,12 +953,12 @@ Diode with low voltage drop</description>
 <label x="99.06" y="121.92" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="W2" gate="G$1" pin="P$1"/>
+<pinref part="W3" gate="G$1" pin="P$1"/>
 <wire x1="182.88" y1="66.04" x2="182.88" y2="68.58" width="0.1524" layer="91"/>
 <label x="182.88" y="68.58" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="W3" gate="G$1" pin="P$1"/>
+<pinref part="W4" gate="G$1" pin="P$1"/>
 <wire x1="210.82" y1="66.04" x2="210.82" y2="68.58" width="0.1524" layer="91"/>
 <label x="210.82" y="68.58" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
@@ -985,7 +985,7 @@ Diode with low voltage drop</description>
 <label x="182.88" y="147.32" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="W4" gate="G$1" pin="P$1"/>
+<pinref part="W2" gate="G$1" pin="P$1"/>
 <wire x1="210.82" y1="149.86" x2="210.82" y2="147.32" width="0.1524" layer="91"/>
 <label x="210.82" y="147.32" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
@@ -1007,10 +1007,10 @@ Diode with low voltage drop</description>
 <label x="215.9" y="104.14" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R2" gate="G$1" pin="1"/>
-<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="114.3" y1="104.14" x2="114.3" y2="101.6" width="0.1524" layer="91"/>
-<pinref part="D2" gate="G$1" pin="A"/>
+<pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="114.3" y1="104.14" x2="124.46" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="104.14" x2="124.46" y2="106.68" width="0.1524" layer="91"/>
 <junction x="114.3" y="104.14"/>
@@ -1021,14 +1021,14 @@ Diode with low voltage drop</description>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="Q4" gate="G$1" pin="D"/>
 <wire x1="114.3" y1="91.44" x2="114.3" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="D1" gate="G$1" pin="C"/>
+<pinref part="D2" gate="G$1" pin="C"/>
 <wire x1="96.52" y1="73.66" x2="96.52" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="96.52" y1="81.28" x2="104.14" y2="81.28" width="0.1524" layer="91"/>
